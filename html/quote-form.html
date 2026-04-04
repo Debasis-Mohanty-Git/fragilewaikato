@@ -1,0 +1,86 @@
+<!-- Quote Form Component -->
+<div class="bg-white rounded-xl shadow-2xl p-6 lg:p-8 w-full max-w-[420px] text-gray-800">
+  <h2 class="text-xl lg:text-2xl font-bold text-center mb-6">Get a Free Moving Quote</h2>
+  <div class="mb-6">
+    <div class="flex justify-between items-center mb-2">
+      <span id="step-indicator-text" class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Step 1 of 3</span>
+    </div>
+    <div class="h-1 w-full bg-gray-100 rounded-full flex gap-1 overflow-hidden">
+      <div id="progress-seg-1" class="h-full flex-1 transition-all duration-500 rounded-full bg-primary"></div>
+      <div id="progress-seg-2" class="h-full flex-1 transition-all duration-500 rounded-full bg-gray-200"></div>
+      <div id="progress-seg-3" class="h-full flex-1 transition-all duration-500 rounded-full bg-gray-200"></div>
+    </div>
+  </div>
+  <div class="space-y-6">
+    <div class="min-h-[220px]">
+      <!-- Step 1 -->
+      <div id="form-step-1" class="space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">Name:</label>
+            <input type="text" placeholder="Your Name" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
+          </div>
+          <div>
+            <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">Phone:</label>
+            <input type="tel" placeholder="Phone Number" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
+          </div>
+        </div>
+        <div>
+          <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">Email:</label>
+          <input type="email" placeholder="Email Address" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
+        </div>
+      </div>
+      <!-- Step 2 -->
+      <div id="form-step-2" class="space-y-4 hidden">
+        <div>
+          <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">Date:</label>
+          <input type="date" value="2026-06-05" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
+        </div>
+        <div>
+          <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">From Address:</label>
+          <input type="text" placeholder="Moving From" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
+        </div>
+        <div>
+          <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">To Address:</label>
+          <input type="text" placeholder="Moving To" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all" />
+        </div>
+      </div>
+      <!-- Step 3 -->
+      <div id="form-step-3" class="space-y-4 hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">Bedrooms:</label>
+            <select class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
+              <option>1 Bedroom</option><option>2 Bedrooms</option><option>3 Bedrooms</option><option>4+ Bedrooms</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">Move Size:</label>
+            <select class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
+              <option>Small</option><option>Medium</option><option>Large</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">Is Packing Required?</label>
+          <select class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all cursor-pointer">
+            <option>No</option><option>Yes</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-[0.75rem] font-bold text-gray-700 uppercase mb-2 tracking-tight">Additional Info:</label>
+          <textarea placeholder="Access, Large Items etc." rows="2" class="w-full bg-gray-50 border border-gray-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"></textarea>
+        </div>
+      </div>
+    </div>
+    <button id="quote-next-btn" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all shadow-[0_8px_15px_rgba(211,47,47,0.3)] active:translate-y-0.5 group uppercase text-sm tracking-widest mt-4">
+      <span id="quote-next-text">Next Step</span>
+      <svg id="quote-arrow-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <div class="flex justify-between mt-6">
+      <span id="label-step-1" class="text-[0.65rem] uppercase font-bold tracking-wider text-primary border-b-2 border-primary pb-1">Step 1</span>
+      <span id="label-step-2" class="text-[0.65rem] uppercase font-bold tracking-wider text-gray-400">Step 2</span>
+      <span id="label-step-3" class="text-[0.65rem] uppercase font-bold tracking-wider text-gray-400">Step 3</span>
+    </div>
+  </div>
+</div>

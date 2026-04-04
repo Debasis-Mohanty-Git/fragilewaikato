@@ -1,13 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/webp" href="https://fragileremovals.co.nz/wp-content/uploads/2024/03/logo.webp" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fragile Removals Waikato</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/webp" href="https://fragileremovals.co.nz/wp-content/uploads/2024/03/logo.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fragile Removals Waikato</title>
+  <meta name="description" content="Professional furniture & office removals in Hamilton, Cambridge & across the wider Waikato region." />
+
+  <!-- CSS - Global -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- CSS - Components -->
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/quote-form.css" />
+  <link rel="stylesheet" href="css/feature-bar.css" />
+  <link rel="stylesheet" href="css/about.css" />
+  <link rel="stylesheet" href="css/services.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <!-- Tailwind CDN for utility styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#D32F2F', 'primary-dark': '#B71C1C' },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-white font-sans m-0 antialiased">
+
+  <!-- Component Placeholders -->
+  <div id="header-container"></div>
+
+  <main>
+    <div id="hero-container"></div>
+    <div id="about-container"></div>
+    <div id="services-container"></div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <!-- JS Modules (loaded in order) -->
+  <script src="js/header.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/quote-form.js"></script>
+  <script src="js/feature-bar.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>

@@ -1,0 +1,9 @@
+/* About Section Styles */
+.about-section iframe {
+  border: none;
+  border-radius: 0.75rem;
+}
+
+.about-section button:hover {
+  transform: translateY(-4px);
+}

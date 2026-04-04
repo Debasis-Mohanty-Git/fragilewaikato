@@ -1,0 +1,8 @@
+/* Hero Section Styles */
+.hero-carousel-img {
+  transition: opacity 1s ease-in-out;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}

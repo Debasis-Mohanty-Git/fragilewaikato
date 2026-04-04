@@ -1,0 +1,16 @@
+/* Header Styles */
+header {
+  font-family: 'Inter', sans-serif;
+}
+
+header nav div:hover {
+  color: #D32F2F;
+}
+
+#mobile-menu-panel {
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-nav-link:hover {
+  color: #D32F2F;
+}

@@ -1,0 +1,17 @@
+/* Feature Bar / Marquee Styles */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+#marquee-track .group:hover {
+  background-color: #111827;
+}

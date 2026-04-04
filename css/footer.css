@@ -1,0 +1,37 @@
+/* Footer Styles */
+footer {
+  font-family: 'Inter', sans-serif;
+}
+
+footer a:hover {
+  color: #D32F2F;
+  transition: color 0.2s ease;
+}
+
+/* Social Media Icons */
+.social-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: #D32F2F;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* Stats Section */
+.stat-value {
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.stat-label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
