@@ -1,34 +1,142 @@
 <!-- Header Component -->
-<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 md:px-6 py-4 lg:px-12 bg-white border-b border-gray-100 shadow-sm text-gray-800">
-  <div class="max-w-screen-2xl mx-auto flex items-center justify-between">
-    <div class="flex items-center gap-2 cursor-pointer transition-transform hover:scale-105">
-      <img src="https://fragileremovals.co.nz/wp-content/uploads/2024/03/logo.webp" alt="Fragile Removals Logo" class="h-10 md:h-12 w-auto object-contain" />
-    </div>
-    <nav class="hidden xl:flex items-center gap-8">
-      <div class="hover:text-primary transition-colors cursor-pointer border-b-2 border-primary text-sm font-medium">Home</div>
-      <div class="hover:text-primary transition-colors cursor-pointer text-sm font-medium">Services</div>
-      <div class="hover:text-primary transition-colors cursor-pointer text-sm font-medium">FAQs</div>
-      <div class="hover:text-primary transition-colors cursor-pointer text-sm font-medium">About Us</div>
-      <div class="hover:text-primary transition-colors cursor-pointer text-sm font-medium">Hamilton</div>
-      <div class="hover:text-primary transition-colors cursor-pointer text-sm font-medium">Contact Us</div>
-    </nav>
-    <div class="flex items-center gap-4">
-      <button class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-4 md:px-5 py-2 md:py-2.5 rounded-md font-bold transition-all shadow-[0_4px_10px_rgba(211,47,47,0.3)] active:translate-y-0.5 text-sm md:text-base">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-        <span class="hidden md:block">027 452 2255</span>
-      </button>
-      <button id="mobile-menu-btn" class="xl:hidden p-2 text-gray-600 hover:text-primary transition-colors">
-        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
-      </button>
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-gray-100 shadow-sm">
+
+  <!-- Main Navigation Bar -->
+  <div class="px-4 md:px-6 lg:px-12 py-3">
+    <div class="max-w-screen-2xl mx-auto flex items-center justify-between">
+
+      <!-- Logo -->
+      <a id="logo-link" href="#" class="flex items-center gap-2 cursor-pointer transition-transform hover:scale-105 flex-shrink-0">
+        <img src="https://fragileremovals.co.nz/wp-content/uploads/2024/03/logo.webp" alt="Fragile Removals Logo" class="h-10 md:h-12 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Navigation (4 items only) -->
+      <nav id="desktop-nav" class="hidden xl:flex items-center gap-1">
+
+        <!-- WAIKATO MOVING SERVICES (Dropdown) -->
+        <div class="nav-dropdown-wrapper" data-dropdown="services">
+          <button class="nav-link nav-dropdown-trigger" data-dropdown="services">
+            Waikato Moving Services
+            <svg class="dropdown-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-menu" data-dropdown-menu="services">
+            <a href="#" class="nav-dropdown-item" data-page="pages/home-moving.html">Waikato Home Moving</a>
+            <a href="#" class="nav-dropdown-item" data-page="pages/commercial-movers.html">Waikato Commercial Movers</a>
+            <a href="#" class="nav-dropdown-item" data-page="pages/office-movers.html">Waikato Office Movers</a>
+            <a href="#" class="nav-dropdown-item" data-page="pages/furniture-movers.html">Waikato Furniture Movers</a>
+            <a href="#" class="nav-dropdown-item" data-page="pages/north-island-moving.html">North Island Moving</a>
+            <a href="#" class="nav-dropdown-item" data-page="pages/moving-your-business.html">Moving Your Business</a>
+          </div>
+        </div>
+
+        <!-- WAIKATO MOVING LOCATIONS (Dropdown) -->
+        <div class="nav-dropdown-wrapper" data-dropdown="locations">
+          <button class="nav-link nav-dropdown-trigger" data-dropdown="locations">
+            Waikato Moving Locations
+            <svg class="dropdown-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div class="nav-dropdown-menu nav-dropdown-menu--wide" data-dropdown-menu="locations">
+            <a href="#" class="nav-dropdown-item">Bay of Plenty Movers</a>
+            <a href="#" class="nav-dropdown-item">Cambridge Movers</a>
+            <a href="#" class="nav-dropdown-item">Hamilton Movers</a>
+            <a href="#" class="nav-dropdown-item">Matamata Movers</a>
+            <a href="#" class="nav-dropdown-item">Morrinsville Movers</a>
+            <a href="#" class="nav-dropdown-item">Raglan Movers</a>
+            <a href="#" class="nav-dropdown-item">Taupō Movers</a>
+            <a href="#" class="nav-dropdown-item">Te Awamutu Movers</a>
+            <a href="#" class="nav-dropdown-item">Waihi Movers</a>
+            <a href="#" class="nav-dropdown-item">Waikato Movers</a>
+          </div>
+        </div>
+
+        <!-- STORAGE SOLUTIONS (red accent) -->
+        <a href="#" class="nav-link nav-link--accent" data-page="pages/storage-solutions.html">Storage Solutions</a>
+
+        <!-- PACKING SERVICES -->
+        <a href="#" class="nav-link" data-page="pages/packing-services.html">Packing Services</a>
+
+      </nav>
+
+      <!-- Phone CTA + Mobile Toggle -->
+      <div class="flex items-center gap-3">
+        <a href="tel:0274522255" class="flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-4 md:px-5 py-2 md:py-2.5 rounded-md font-bold transition-all shadow-[0_4px_10px_rgba(211,47,47,0.3)] active:translate-y-0.5 text-sm md:text-base">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <span class="hidden md:block">027 452 2255</span>
+        </a>
+        <button id="mobile-menu-btn" class="xl:hidden p-2 text-gray-600 hover:text-primary transition-colors" aria-label="Toggle menu">
+          <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
     </div>
   </div>
-  <div id="mobile-menu-panel" class="hidden xl:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg flex flex-col items-center py-6 gap-4 font-bold text-gray-800">
-    <div class="mobile-nav-link hover:text-primary transition-colors cursor-pointer w-full text-center py-2">Home</div>
-    <div class="mobile-nav-link hover:text-primary transition-colors cursor-pointer w-full text-center py-2">Services</div>
-    <div class="mobile-nav-link hover:text-primary transition-colors cursor-pointer w-full text-center py-2">FAQs</div>
-    <div class="mobile-nav-link hover:text-primary transition-colors cursor-pointer w-full text-center py-2">About Us</div>
-    <div class="mobile-nav-link hover:text-primary transition-colors cursor-pointer w-full text-center py-2">Hamilton</div>
-    <div class="mobile-nav-link hover:text-primary transition-colors cursor-pointer w-full text-center py-2">Contact Us</div>
+
+  <!-- Mobile Menu Panel (all items + FAQ) -->
+  <div id="mobile-menu-panel" class="hidden xl:hidden mobile-menu-panel">
+    <div class="max-w-screen-2xl mx-auto px-6 py-6 flex flex-col gap-1">
+
+      <!-- WAIKATO -->
+      <a href="#" class="mobile-nav-link" data-page="index.html">Waikato</a>
+
+      <!-- MOVING SERVICES (Accordion) -->
+      <div class="mobile-accordion">
+        <button class="mobile-nav-link mobile-accordion-trigger" data-mobile-accordion="services">
+          Moving Services
+          <svg class="mobile-accordion-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mobile-accordion-content" data-mobile-panel="services">
+          <a href="#" class="mobile-sub-link" data-page="pages/home-moving.html">Waikato Home Moving</a>
+          <a href="#" class="mobile-sub-link" data-page="pages/commercial-movers.html">Waikato Commercial Movers</a>
+          <a href="#" class="mobile-sub-link" data-page="pages/office-movers.html">Waikato Office Movers</a>
+          <a href="#" class="mobile-sub-link" data-page="pages/furniture-movers.html">Waikato Furniture Movers</a>
+          <a href="#" class="mobile-sub-link" data-page="pages/north-island-moving.html">North Island Moving</a>
+          <a href="#" class="mobile-sub-link" data-page="pages/moving-your-business.html">Moving Your Business</a>
+        </div>
+      </div>
+
+      <!-- STORAGE SOLUTIONS -->
+      <a href="#" class="mobile-nav-link" data-page="pages/storage-solutions.html">Storage Solutions</a>
+
+      <!-- PACKING SERVICES -->
+      <a href="#" class="mobile-nav-link" data-page="pages/packing-services.html">Packing Services</a>
+
+      <!-- REVIEWS -->
+      <a href="https://nz.trustpilot.com/review/fragileremovals.co.nz" target="_blank" class="mobile-nav-link">Reviews</a>
+
+      <!-- CONTACT US -->
+      <a href="#" class="mobile-nav-link">Contact Us</a>
+
+      <!-- MOVING ADVICE (highlighted) -->
+      <a href="#" class="mobile-nav-link mobile-nav-link--accent">Moving Advice</a>
+
+      <!-- FAQs -->
+      <a href="#" class="mobile-nav-link">FAQs</a>
+
+      <!-- LOCATIONS (Accordion) -->
+      <div class="mobile-accordion">
+        <button class="mobile-nav-link mobile-accordion-trigger" data-mobile-accordion="locations">
+          Locations
+          <svg class="mobile-accordion-arrow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mobile-accordion-content" data-mobile-panel="locations">
+          <a href="#" class="mobile-sub-link">Bay of Plenty Movers</a>
+          <a href="#" class="mobile-sub-link">Cambridge Movers</a>
+          <a href="#" class="mobile-sub-link">Hamilton Movers</a>
+          <a href="#" class="mobile-sub-link">Matamata Movers</a>
+          <a href="#" class="mobile-sub-link">Morrinsville Movers</a>
+          <a href="#" class="mobile-sub-link">Raglan Movers</a>
+          <a href="#" class="mobile-sub-link">Taupō Movers</a>
+          <a href="#" class="mobile-sub-link">Te Awamutu Movers</a>
+          <a href="#" class="mobile-sub-link">Waihi Movers</a>
+          <a href="#" class="mobile-sub-link">Waikato Movers</a>
+        </div>
+      </div>
+
+      <!-- GET A FREE QUOTE (Mobile CTA) -->
+      <a href="#" class="mobile-cta-button" data-page="index.html#quote">Get a Free Quote</a>
+
+    </div>
   </div>
+
 </header>

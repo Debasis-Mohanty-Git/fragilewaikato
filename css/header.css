@@ -1,16 +1,302 @@
-/* Header Styles */
+/* ============================================================
+   HEADER & NAVIGATION STYLES
+   Professional navbar with hover dropdowns (desktop)
+   and accordion menus (mobile)
+   ============================================================ */
+
 header {
   font-family: 'Inter', sans-serif;
 }
 
-header nav div:hover {
-  color: #D32F2F;
+/* ---- Top Utility Bar ---- */
+.nav-highlight-link {
+  color: #D32F2F !important;
+  font-weight: 600;
 }
 
-#mobile-menu-panel {
-  transition: all 0.2s ease-in-out;
+/* ---- Desktop Nav Links ---- */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.2s ease, background-color 0.2s ease;
+  white-space: nowrap;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #D32F2F;
+  background-color: rgba(211, 47, 47, 0.06);
+}
+
+.nav-link--accent {
+  color: #D32F2F !important;
+}
+
+.nav-link--accent:hover {
+  background-color: rgba(211, 47, 47, 0.1);
+}
+
+/* ---- Dropdown Arrow ---- */
+.dropdown-arrow {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.25s ease;
+  flex-shrink: 0;
+}
+
+.nav-dropdown-wrapper:hover .dropdown-arrow,
+.nav-dropdown-wrapper.is-open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* ---- Desktop Dropdown Wrapper ---- */
+.nav-dropdown-wrapper {
+  position: relative;
+}
+
+/* ---- Desktop Dropdown Menu ---- */
+.nav-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%) translateY(6px);
+  min-width: 240px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s ease;
+  z-index: 100;
+}
+
+.nav-dropdown-menu--wide {
+  min-width: 220px;
+}
+
+/* Show on hover (desktop) */
+.nav-dropdown-wrapper:hover .nav-dropdown-menu,
+.nav-dropdown-wrapper.is-open .nav-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Invisible bridge to prevent gap between trigger and menu */
+.nav-dropdown-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: transparent;
+}
+
+/* ---- Dropdown Item ---- */
+.nav-dropdown-item {
+  display: block;
+  padding: 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.nav-dropdown-item:hover {
+  background: linear-gradient(135deg, rgba(211, 47, 47, 0.08), rgba(211, 47, 47, 0.04));
+  color: #D32F2F;
+  padding-left: 22px;
+}
+
+/* Hover indicator bar */
+.nav-dropdown-item::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%) scaleY(0);
+  width: 3px;
+  height: 18px;
+  background: #D32F2F;
+  border-radius: 3px;
+  transition: transform 0.2s ease;
+}
+
+.nav-dropdown-item:hover::before {
+  transform: translateY(-50%) scaleY(1);
+}
+
+
+/* ============================================================
+   MOBILE MENU
+   ============================================================ */
+
+.mobile-menu-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #f3f4f6;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+  max-height: 75vh;
+  overflow-y: auto;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Mobile Nav Link ---- */
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1f2937;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .mobile-nav-link:hover {
   color: #D32F2F;
+  background-color: rgba(211, 47, 47, 0.03);
+}
+
+.mobile-nav-link--accent {
+  color: #D32F2F !important;
+}
+
+/* ---- Mobile Accordion ---- */
+.mobile-accordion {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.mobile-accordion-trigger {
+  border-bottom: none !important;
+}
+
+.mobile-accordion-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.mobile-accordion.is-open .mobile-accordion-arrow {
+  transform: rotate(180deg);
+}
+
+/* ---- Mobile Accordion Content ---- */
+.mobile-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.mobile-accordion.is-open .mobile-accordion-content {
+  max-height: 600px;
+}
+
+/* ---- Mobile Sub Link ---- */
+.mobile-sub-link {
+  display: block;
+  padding: 11px 0;
+  font-size: 12.5px;
+  font-weight: 500;
+  color: #4b5563;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: color 0.2s ease;
+}
+
+.mobile-sub-link:hover {
+  color: #D32F2F;
+}
+
+/* Subtle separator between sub-links */
+.mobile-sub-link + .mobile-sub-link {
+  border-top: 1px solid #f9fafb;
+}
+
+/* ---- Mobile CTA Button ---- */
+.mobile-cta-button {
+  display: block;
+  margin-top: 12px;
+  padding: 14px 24px;
+  background: #D32F2F;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.mobile-cta-button:hover {
+  background: #B71C1C;
+}
+
+
+/* ============================================================
+   SCROLLBAR FOR MOBILE MENU
+   ============================================================ */
+.mobile-menu-panel::-webkit-scrollbar {
+  width: 4px;
+}
+.mobile-menu-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+.mobile-menu-panel::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
 }
