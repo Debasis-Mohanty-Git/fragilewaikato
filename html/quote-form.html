@@ -73,10 +73,16 @@
         </div>
       </div>
     </div>
-    <button id="quote-next-btn" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all shadow-[0_8px_15px_rgba(211,47,47,0.3)] active:translate-y-0.5 group uppercase text-sm tracking-widest mt-4">
-      <span id="quote-next-text">Next Step</span>
-      <svg id="quote-arrow-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </button>
+    <div class="flex flex-col gap-3 mt-4">
+      <button id="quote-next-btn" class="w-full bg-primary hover:bg-primary-dark text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all shadow-[0_8px_15px_rgba(211,47,47,0.3)] active:translate-y-0.5 group uppercase text-sm tracking-widest">
+        <span id="quote-next-text">Next Step</span>
+        <svg id="quote-arrow-icon" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+      <button id="quote-back-btn" class="hidden w-full bg-white hover:bg-gray-50 text-gray-500 font-bold py-3 rounded-lg flex items-center justify-center gap-2 transition-all active:translate-y-0.5 group uppercase text-[0.7rem] tracking-widest border border-gray-200">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span>Back to Previous Step</span>
+      </button>
+    </div>
     <div class="flex justify-between mt-6">
       <span id="label-step-1" class="text-[0.65rem] uppercase font-bold tracking-wider text-primary border-b-2 border-primary pb-1">Step 1</span>
       <span id="label-step-2" class="text-[0.65rem] uppercase font-bold tracking-wider text-gray-400">Step 2</span>

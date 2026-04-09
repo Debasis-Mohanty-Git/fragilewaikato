@@ -3,6 +3,7 @@ function initQuoteForm() {
   let currentStep = 1;
   const totalSteps = 3;
   const formNextBtn = document.getElementById('quote-next-btn');
+  const formBackBtn = document.getElementById('quote-back-btn');
   const formNextText = document.getElementById('quote-next-text');
   const formArrowIcon = document.getElementById('quote-arrow-icon');
   const stepIndicatorText = document.getElementById('step-indicator-text');
@@ -38,6 +39,9 @@ function initQuoteForm() {
       formNextText.textContent = currentStep === 3 ? "Get a Free Estimate" : "Next Step";
       formArrowIcon?.classList.toggle('hidden', currentStep === 3);
     }
+    if (formBackBtn) {
+      formBackBtn.classList.toggle('hidden', currentStep === 1);
+    }
   }
 
   if (formNextBtn) {
@@ -45,6 +49,13 @@ function initQuoteForm() {
       e.preventDefault();
       if (currentStep < 3) { currentStep++; updateFormUI(); }
       else { alert('Quote submitted successfully! (Demo Mode)'); currentStep = 1; updateFormUI(); }
+    });
+  }
+
+  if (formBackBtn) {
+    formBackBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentStep > 1) { currentStep--; updateFormUI(); }
     });
   }
 }
