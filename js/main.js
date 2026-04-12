@@ -25,6 +25,20 @@ async function loadComponent(url, containerId) {
   }
 }
 
+// FAQ Accordion for services.html (loaded into #services-container)
+function initFaqAccordionHome() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  if (!faqItems.length) return;
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      faqItems.forEach(other => {
+        if (other !== item) other.classList.remove('open');
+      });
+      item.classList.toggle('open');
+    });
+  });
+}
+
 async function initApp() {
   // Step 1: Load top-level components first
   await loadComponent('html/header.html', 'header-container');
@@ -44,6 +58,9 @@ async function initApp() {
   initCarousel();
   initQuoteForm();
   initFeatureBar();
+
+  // Step 4b: Initialize FAQ accordion (from services.html)
+  initFaqAccordionHome();
 
   // Step 5: Force Tailwind to re-scan all new DOM elements
   // Small delay ensures all DOM mutations are processed

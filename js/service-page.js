@@ -41,18 +41,30 @@ async function initServicePage() {
 }
 
 function initFaqAccordion() {
+  // Legacy pattern: .service-faq-item / .service-faq-trigger / .is-open
   document.querySelectorAll('.service-faq-trigger').forEach(trigger => {
     trigger.addEventListener('click', () => {
       const item = trigger.closest('.service-faq-item');
       const isOpen = item.classList.contains('is-open');
 
-      // Close all other FAQs
       document.querySelectorAll('.service-faq-item.is-open').forEach(other => {
         if (other !== item) other.classList.remove('is-open');
       });
 
-      // Toggle current
       item.classList.toggle('is-open', !isOpen);
+    });
+  });
+
+  // New pattern: .faq-item / .open (used in services.html FAQ section)
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      // Close all other open FAQ items
+      faqItems.forEach(other => {
+        if (other !== item) other.classList.remove('open');
+      });
+      // Toggle clicked item
+      item.classList.toggle('open');
     });
   });
 }
