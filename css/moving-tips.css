@@ -1,0 +1,371 @@
+/* ============================================================
+   MOVING TIPS & GUIDES STYLES — KNOWLEDGE HUB EDITION
+   ============================================================ */
+
+:root {
+  --primary: #E63946;
+  --primary-hover: #C12735;
+  --bg-deep: #0f1629;
+  --bg-soft: #F9FAFB;
+  --text-main: #1F2937;
+  --text-muted: #4B5563;
+  --white: #ffffff;
+}
+
+/* ---- Tips Hero (Refactored to match user reference) ---- */
+.tips-hero {
+  position: relative;
+  min-height: 100vh;
+  background: #FFF9F8; /* Subtle soft-wash background matching Contact page */
+  display: flex;
+  align-items: center;
+  padding: 120px 24px 80px; /* Adjust padding for 100vh layout */
+}
+
+.tips-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .tips-hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+}
+
+.tips-hero-text h1 {
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+.tips-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.tips-hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.1);
+}
+
+.tips-hero-image-wrapper img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-read-guide {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 16px 40px;
+  border-radius: 99px; /* Rounded button like the screenshot */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(230, 57, 70, 0.2);
+}
+
+.btn-read-guide:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 30px rgba(230, 57, 70, 0.3);
+}
+
+/* ---- Section Headers ---- */
+.section-title-group {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.section-title-group h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+}
+
+/* ---- Roadmap Checklist ---- */
+.roadmap-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px 0;
+}
+
+.roadmap-item {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 48px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .roadmap-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.roadmap-time {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--primary);
+  text-align: right;
+  padding-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .roadmap-time { text-align: left; }
+}
+
+.roadmap-content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+  transition: transform 0.3s ease;
+}
+
+.roadmap-content:hover {
+  transform: translateX(10px);
+  border-color: var(--primary);
+}
+
+.roadmap-content h3 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.roadmap-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.roadmap-list li {
+  position: relative;
+  padding-left: 28px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.roadmap-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: black;
+}
+
+/* ---- Expert Grid (Refactoring Cards) ---- */
+.advice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+}
+
+@media (max-width: 1024px) {
+  .advice-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .advice-grid { grid-template-columns: 1fr; }
+}
+
+.advice-card {
+  background: #fff;
+  border-radius: 12px; /* Standard blog card border radius */
+  overflow: hidden;
+  border: 1px solid #E5E7EB;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.advice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08); /* More subtle hover than before */
+}
+
+.advice-img {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.advice-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.advice-card:hover .advice-img img {
+  transform: scale(1.05);
+}
+
+.advice-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.advice-body h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.advice-body p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.read-more-btn {
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  transition: gap 0.2s;
+}
+
+.read-more-btn:hover {
+  gap: 12px;
+}
+
+/* ---- Article Content ---- */
+.article-section {
+  background: var(--bg-soft);
+  padding: 80px 24px 100px 24px;
+}
+
+.article-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.article-block {
+  background: #fff;
+  border-radius: 24px;
+  padding: 48px 56px;
+  margin-bottom: 48px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.03);
+  scroll-margin-top: 120px; /* Offset for sticky header anchor linking */
+}
+
+@media (max-width: 768px) {
+  .article-block {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+}
+
+.article-block h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  position: relative;
+}
+
+.article-block h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--primary);
+  margin-top: 24px;
+  margin-bottom: 32px;
+  border-radius: 2px;
+}
+
+.article-block p {
+  color: var(--text-muted);
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.article-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- CTA Section ---- */
+.tips-cta {
+  background: var(--bg-deep);
+  padding: 100px 24px;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-premium {
+  display: inline-block;
+  background: var(--primary);
+  color: #fff;
+  padding: 20px 48px;
+  border-radius: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+}
+
+/* ---- Comprehensive Responsive Overrides ---- */
+@media (max-width: 768px) {
+  .tips-hero { padding: 80px 20px 60px; }
+  .advice-grid { padding: 60px 20px; gap: 24px; }
+  .article-section { padding: 60px 20px 80px; }
+  .tips-cta { padding: 60px 20px; }
+}
+
+@media (max-width: 480px) {
+  .tips-hero-text h1 { font-size: 2rem; }
+  .article-block { padding: 24px 20px; margin-bottom: 32px; }
+  .article-block h2 { font-size: 1.5rem; }
+  .tips-hero-image-wrapper img { height: 300px; }
+}

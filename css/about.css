@@ -1,9 +1,365 @@
-/* About Section Styles */
-.about-section iframe {
-  border: none;
-  border-radius: 0.75rem;
+/* ============================================================
+   ABOUT US PAGE STYLES — PREMIUM LOGISTICS EDITION
+   Clean, modern, and high-trust aesthetic
+   ============================================================ */
+
+:root {
+  --primary: #E63946;
+  --primary-dark: #C62828;
+  --bg-deep: #0f1629;
+  --bg-soft: #F9FAFB;
+  --text-main: #1F2937;
+  --text-muted: #6B7280;
+  --white: #ffffff;
 }
 
-.about-section button:hover {
-  transform: translateY(-4px);
+/* ---- About Hero ---- */
+.about-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.about-hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+.about-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(15, 22, 41, 0.4) 0%, rgba(15, 22, 41, 0.7) 100%);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 900px;
+  padding: 0 24px;
+}
+
+.about-hero section-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--primary);
+  margin-bottom: 20px;
+  background: rgba(230, 57, 70, 0.1);
+  padding: 8px 16px;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+}
+
+.about-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
+}
+
+/* ---- Story Section ---- */
+.section-about {
+  padding: 120px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .about-story-grid { grid-template-columns: 1fr; gap: 48px; }
+}
+
+.story-content h2 {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+
+.story-content p {
+  font-size: 1.125rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.story-image {
+  position: relative;
+}
+
+.story-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.image-badge {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--primary);
+  color: #fff;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(230, 57, 70, 0.4);
+}
+
+.badget-num { font-size: 40px; font-weight: 900; line-height: 1; display: block; }
+.badge-text { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+
+/* ---- Commitment Cards ---- */
+.section-commitment {
+  background-color: var(--bg-soft);
+  padding: 100px 24px;
+}
+
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .commitment-grid { grid-template-columns: 1fr; }
+}
+
+.commitment-card {
+  background: #fff;
+  padding: 48px 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(0,0,0,0.03);
+  transition: all 0.3s ease;
+}
+
+.commitment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.card-icon {
+  font-size: 48px;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.commitment-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.commitment-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* ---- Logistics Process Timeline ---- */
+.section-process {
+  padding: 120px 24px;
+}
+
+.process-timeline {
+  max-width: 1000px;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.process-step {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.process-step:nth-child(even) { direction: rtl; }
+.process-step:nth-child(even) .step-content { direction: ltr; }
+
+.step-content h4 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  color: var(--text-main);
+  margin-bottom: 20px;
+}
+
+.step-content p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.step-visual {
+  background: var(--bg-soft);
+  border-radius: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  min-height: 240px;
+}
+
+/* ---- Team Grid ---- */
+.section-team {
+  background-color: var(--bg-deep);
+  color: #fff;
+  padding: 120px 24px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+
+.team-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: var(--primary);
+  transform: translateY(-5px);
+}
+
+.team-avatar {
+  width: 100px;
+  height: 100px;
+  background: rgba(230, 57, 70, 0.1);
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  border: 2px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+
+.team-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-card h5 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.team-card .role {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.team-card .bio {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+
+/* ---- Section Title Helper ---- */
+.section-tag {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 800;
+  font-size: 11px;
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section-title-main {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 12px;
+  color: var(--text-main);
+}
+
+.section-team .section-title-main { color: #fff; }
+
+.section-desc {
+  text-align: center;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+/* ---- Comprehensive Responsive Overrides ---- */
+@media (max-width: 1024px) {
+  .process-step {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  .process-step:nth-child(even) {
+    direction: ltr; /* Fix reversing on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  .section-about, .section-commitment, .section-process, .section-team {
+    padding: 80px 24px;
+  }
+  .commitment-card {
+    padding: 32px 24px;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-about, .section-commitment, .section-process, .section-team {
+    padding: 60px 16px;
+  }
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  .step-visual {
+    min-height: 180px;
+    font-size: 60px;
+  }
+  .story-content h2, .section-title-main {
+    font-size: 2rem;
+  }
 }

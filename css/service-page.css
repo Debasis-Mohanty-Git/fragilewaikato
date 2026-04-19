@@ -670,4 +670,8 @@
   .hero-stats-container .service-stat { padding: 12px 8px; }
   .service-stat-number { font-size: 1.4rem; }
   .service-stat-label { font-size: 0.65rem; }
+  .service-hero { padding: 80px 16px 160px; }
+  .service-intro, .service-details, .service-faq, .service-cta { padding: 60px 16px; }
+  .service-intro h2, .service-details h2, .service-faq h2, .service-cta h2 { font-size: 2rem; }
+  .service-feature-card { padding: 24px 20px; }
 }

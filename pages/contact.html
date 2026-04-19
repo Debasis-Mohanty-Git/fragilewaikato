@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/webp" href="https://fragileremovals.co.nz/wp-content/uploads/2024/03/logo.webp" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Waikato Movers & Logistics Experts</title>
+  <meta name="description" content="Reach out to the Waikato's premier moving team. Book a walkthrough, request a custom quote, or ask about our residential and commercial logistics." />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+  <link rel="stylesheet" href="../css/footer.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+
+  <!-- Tailwind CDN (Optional for minor utilities) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#E63946', 'primary-hover': '#C12735' },
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="min-h-screen bg-white font-sans m-0 antialiased">
+
+  <div id="header-container"></div>
+
+  <main>
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+      <div class="contact-hero-inner">
+        <!-- Left: Text content -->
+        <div class="contact-hero-text">
+          <span class="text-primary font-bold uppercase tracking-widest text-xs mb-4 block">On The Move</span>
+          <h1 class="text-6xl font-black mb-6 leading-tight">LET'S GET YOUR <br/> LIFE IN MOTION.</h1>
+          <p class="text-muted text-lg max-w-md">Whether you're moving across the street or across the country, our logistics experts are ready to handle the heavy lifting with industrial precision.</p>
+        </div>
+        
+        <!-- Right: Image with Badge -->
+        <div class="contact-hero-visual">
+          <div class="contact-hero-image-wrapper">
+            <img src="../images/Contact/contact-hero.jpg" alt="Waikato Movers logistics team" />
+            <div class="satisfaction-badge">
+              <span class="score">4.9/5</span>
+              <span class="label">Customer satisfaction</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Contact Section -->
+    <section class="section-contact">
+      <div class="contact-container">
+        
+        <!-- Left: Info Hub -->
+        <div class="contact-info-hub">
+          <div class="info-card">
+            <div class="info-icon">📍</div>
+            <h3>Headquarters</h3>
+            <p>123 Relocation Lane, Hamilton,<br/>Waikato 3204, New Zealand</p>
+            <a href="https://maps.google.com" target="_blank">Get Directions →</a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">📞</div>
+            <h3>Direct Contact</h3>
+            <p>Speak directly with our logistics team for immediate inquiries.</p>
+            <a href="tel:0274522255" class="text-2xl mt-2 block font-black">027 452 2255</a>
+            <a href="mailto:info@waikatomovers.co.nz" class="text-muted font-medium block mt-1 hover:text-primary transition-colors">info@waikatomovers.co.nz</a>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">⏰</div>
+            <h3>Operating Hours</h3>
+            <p class="mb-2"><strong>Mon – Fri:</strong> 8:00am – 6:00pm</p>
+            <p><strong>Saturday:</strong> 9:00am – 4:00pm</p>
+            <p class="text-sm mt-4 text-primary font-bold">Closed Sundays & Public Holidays</p>
+          </div>
+        </div>
+
+        <!-- Right: Inquiry Form -->
+        <div class="contact-form-wrapper">
+          <h2 class="form-title">Send a Message</h2>
+          <p class="form-subtitle">Fill in the details below and one of our specialists will reach out within 2 hours.</p>
+          
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-row">
+              <div class="input-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="Stephen" required />
+              </div>
+              <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Doe" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="email@example.com" required />
+              </div>
+              <div class="input-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="027 000 0000" required />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <label for="service-type">Service Type</label>
+              <select id="service-type" name="service-type">
+                <option value="residential">Residential Moving</option>
+                <option value="commercial">Commercial Relocation</option>
+                <option value="storage">Storage Solutions</option>
+                <option value="packing">Packing Services</option>
+              </select>
+            </div>
+
+            <div class="input-group">
+              <label for="message">Your Inquiry</label>
+              <textarea id="message" name="message" placeholder="Please provide some details about your move..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit Inquiry</button>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="region-section">
+      <div class="max-w-4xl mx-auto">
+        <span class="text-primary font-bold uppercase tracking-widest text-sm mb-4 block">Our Reach</span>
+        <h2 class="text-4xl font-black mb-6">Serving the Entire Waikato</h2>
+        <p class="text-muted text-lg">From central Hamilton to the coastal reaches of Raglan and the hills of Cambridge, we move the Waikato with pride.</p>
+        
+        <div class="map-placeholder">
+          <!-- Google Maps Embed Placeholder or Region Map Image -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098462!2d175.2040608!3d-37.7854203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d6d22ef87fb440f%3A0x500ef6143a29910!2sHamilton%2C%20New%20Zealand!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+            width="100%" height="100%" style="border:0; border-radius: 32px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <!-- Scripts -->
+  <script src="../js/header.js"></script>
+  <script src="../js/service-page.js"></script>
+</body>
+</html>

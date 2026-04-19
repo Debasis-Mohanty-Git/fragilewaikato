@@ -8,7 +8,7 @@ async function loadComponent(url, containerId) {
       console.warn(`Container #${containerId} not found, skipping ${url}`);
       return;
     }
-    const response = await fetch(url);
+    const response = await fetch(`${url}?v=${new Date().getTime()}`);
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const html = await response.text();
 

@@ -55,16 +55,23 @@ function initFaqAccordion() {
     });
   });
 
-  // New pattern: .faq-item / .open (used in services.html FAQ section)
+  // New pattern: .faq-item / .open
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
-    item.addEventListener('click', () => {
-      // Close all other open FAQ items
-      faqItems.forEach(other => {
+    item.addEventListener('click', (e) => {
+      // If clicking a link inside the answer, don't toggle
+      if (e.target.closest('a')) return;
+
+      const parent = item.closest('.faq-accordion') || item.parentElement;
+      const isOpen = item.classList.contains('open');
+
+      // Close all other open FAQ items within the same parent
+      parent.querySelectorAll('.faq-item.open').forEach(other => {
         if (other !== item) other.classList.remove('open');
       });
+
       // Toggle clicked item
-      item.classList.toggle('open');
+      item.classList.toggle('open', !isOpen);
     });
   });
 }
